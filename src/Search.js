@@ -12,12 +12,15 @@ const Search = () => {
   const userPerPage = 15;
   const pagesVisited = pageNumber * userPerPage;
 
-
   useEffect(() => {
     const getData = async () => {
-      const response = await axios("https://api.jikan.moe/v4/characters");
+      try {
+        const response = await axios("https://api.jikan.moe/v4/characters");
         console.log(response.data.data);
-      setData(response.data.data);
+        setData(response.data.data);
+      } catch (err) {
+        alert(err);
+      }
     };
     getData();
   }, []);
@@ -37,7 +40,9 @@ const Search = () => {
         <ul key={item.mal_id} className="user">
           <img src={item.images.jpg.image_url} alt="anime" width="5%" />
           <h3>Name: {item.name}</h3>
-          <a href={item.url}target="_blank" rel="noopener noreferrer" >More details.... </a>
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            More details....{" "}
+          </a>
         </ul>
       );
     });
