@@ -1,0 +1,39 @@
+.paginationBtns {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.paginationBtns a{
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    color: blue;
+    cursor: pointer;
+}
+
+.paginationBtns a:hover{
+    color: white;
+    background-color: blue;
+}
+
+.paginationActive a{
+    color: white;
+    background-color: blue;
+}
+
+.user{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width: 300px; */
+    height: 200px;
+    /* margin: 20px; */
+}
