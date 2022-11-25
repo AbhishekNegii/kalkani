@@ -38,11 +38,15 @@ const Search = () => {
     .map((item) => {
       return (
         <ul key={item.mal_id} className="user">
-          <img src={item.images.jpg.image_url} alt="anime" width="5%" />
+          <div>  
+          <img src={item.images.jpg.image_url} alt="anime" width="10%" />
           <h3>Name: {item.name}</h3>
+          </div>
+          <div>
           <a href={item.url} target="_blank" rel="noopener noreferrer">
-            More details....{" "}
+            More details....
           </a>
+          </div>
         </ul>
       );
     });
@@ -67,7 +71,7 @@ const Search = () => {
         />
         <br />
         <br />
-        Total {displayUsers.length} matching anime characters found
+        Total {displayUsers.length} matching Anime Characters found
         <hr />
         <br />
       </div>
